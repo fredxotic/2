@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fred Kaloki - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d; 
+            color: #e2e8f0; 
+            scroll-behavior: smooth;
+        }
+
+        .icon-lg, .icon-md, .icon-sm {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #4a5568;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #6b7280;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-progress {
+            transition: width 1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-[#0d0d0d] text-[#e2e8f0] font-sans leading-relaxed tracking-wide">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d0d] bg-opacity-80 backdrop-blur-sm shadow-xl py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-center space-x-2 sm:space-x-4 px-4">
+            <a href="#about" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="about">About</a>
+            <a href="#education" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="education">Education</a>
+            <a href="#skills" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="skills">Skills</a>
+            <a href="#projects" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="projects">Projects</a>
+            <a href="#careerGoals" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="careerGoals">Goals</a>
+            <a href="#contact" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-24 pb-12 sm:pt-32 sm:pb-24 lg:pt-32 lg:pb-32 flex items-center justify-center text-center">
+        <div class="relative z-10 p-4 md:p-6 bg-[#1a1a1a] bg-opacity-70 backdrop-blur-sm rounded-3xl shadow-2xl border border-gray-700 max-w-2xl mx-auto transform transition-all duration-500 hover:scale-[1.01]">
+            <h1 class="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-[#00e5ff] mb-2 tracking-tight leading-tight drop-shadow-md animate-[fadeInDown_1s_ease-out]">
+                Hello there!
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-gray-300 italic font-medium drop-shadow-sm animate-[fadeInUp_1s_ease-out]">
+                "Welcome to my portfolio! I am an ambitious learner & aspiring professional at the intersection of Business, Accounting, and Technology."
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Sections -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e2e8f0] text-center mb-12 sm:mb-16 tracking-tight">About Me</h2>
+            <div class="bg-[#1a1a1a] rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl border border-[#2d2d2d] md:grid md:grid-cols-2 md:gap-12 items-center">
+                <!-- Image Container -->
+                <div class="mb-8 md:mb-0">
+                    <img src="me.jpg" alt="A professional portrait of Fred Kaloki." class="w-full h-auto object-cover rounded-3xl shadow-lg border border-gray-600 transform transition-transform duration-300 hover:scale-[1.03]">
+                </div>
+                <div>
+                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+                        I am Fred Kaloki, a student and aspiring professional interested in business, accounting, and technology. I am currently pursuing a Bachelor of Commerce (BCom) at Egerton University while also preparing for the Certified Public Accountant (CPA) qualification. I believe in combining financial knowledge with digital skills to prepare for the future of business. I am a disciplined learner who is always looking for new ways to grow and apply my skills to real-world projects.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e2e8f0] text-center mb-12 sm:mb-16 tracking-tight">Education</h2>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Egerton University -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <i data-lucide="graduation-cap" class="text-[#00e5ff]" style="width: 32px; height: 32px;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-100">Bachelor of Commerce (BCom)</h3>
+                            <p class="text-sm text-gray-400">Egerton University</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Currently pursuing BCom with a focus on accounting and finance. Developing a balance between theoretical business concepts and practical application. Actively integrating learning with professional certifications and tech projects.</p>
+                </div>
+                <!-- Upper Hill School -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <i data-lucide="graduation-cap" class="text-[#00e5ff]" style="width: 32px; height: 32px;"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-100">Kenya Certificate of Secondary Education (KCSE)</h3>
+                            <p class="text-sm text-gray-400">Upper Hill School (2021–2024)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Completed high school education at one of Kenya’s top institutions. Gained a strong foundation in commerce-related knowledge, problem-solving, and teamwork. Built leadership and adaptability skills through academic and extracurricular activities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Development & Certifications Section -->
+        <section id="professionalDevelopment" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e2e8f0] text-center mb-12 sm:mb-16 tracking-tight">Professional Development & Certifications</h2>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                <!-- CPA -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-gray-100 mb-2">Certified Public Accountant (CPA)</h3>
+                    <p class="text-gray-300 leading-relaxed">Actively preparing to pursue CPA alongside my BCom studies. Currently building familiarity through self-study and resources, with plans to progress seriously from my second semester. Long-term goal: attain full CPA certification as a cornerstone of my professional credibility in accounting and finance.</p>
+                </div>
+                <!-- PLP Academy -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-gray-100 mb-2">PLP Academy (Power Learn Project Academy)</h3>
+                    <p class="text-gray-300 leading-relaxed">Enrolled in a pan-African digital skills program focusing on programming, professional development, and innovation. Currently developing skills in Python programming, web development, and data science foundations. Engaged in collaborative projects and peer learning to sharpen teamwork and real-world problem-solving abilities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section - Updated with Progress Bars -->
+        <section id="skills" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e2e8f0] text-center mb-12 sm:mb-16 tracking-tight">Skills</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Business & Accounting -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-3 mb-4 text-[#00e5ff]">
+                        <i data-lucide="briefcase" class="text-[#00e5ff]" style="width: 24px; height: 24px;"></i>
+                        <h3 class="text-xl font-bold text-gray-100">Business & Accounting</h3>
+                    </div>
+                    <ul class="list-none pl-0 space-y-4 text-gray-300">
+                        <li>
+                            <p class="font-medium">Commerce Fundamentals</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="75%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Financial Reporting</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="60%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Financial Analysis</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="65%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Budgeting & Forecasting</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="55%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Technical Skills -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-3 mb-4 text-[#00e5ff]">
+                        <i data-lucide="code" class="text-[#00e5ff]" style="width: 24px; height: 24px;"></i>
+                        <h3 class="text-xl font-bold text-gray-100">Technical Skills</h3>
+                    </div>
+                    <ul class="list-none pl-0 space-y-4 text-gray-300">
+                        <!-- Python with breakdown -->
+                        <li>
+                            <p class="font-medium">Python</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="90%"></div>
+                            </div>
+                            <ul class="list-disc pl-4 mt-2 text-sm text-gray-400">
+                                <li><strong>NumPy:</strong> For efficient numerical operations.</li>
+                                <li><strong>Pandas:</strong> For data manipulation and analysis.</li>
+                                <li><strong>Scikit-learn:</strong> For machine learning models.</li>
+                                <li><strong>Matplotlib/Seaborn:</strong> For data visualization.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="font-medium">Web Development (HTML/CSS/JS)</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="80%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Tools & Software -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-3 mb-4 text-[#00e5ff]">
+                        <i data-lucide="sparkles" class="text-[#00e5ff]" style="width: 24px; height: 24px;"></i>
+                        <h3 class="text-xl font-bold text-gray-100">Tools & Software</h3>
+                    </div>
+                    <ul class="list-none pl-0 space-y-4 text-gray-300">
+                        <li>
+                            <p class="font-medium">Microsoft Office Suite</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="95%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Google Workspace</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="90%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Excel</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Git & GitHub</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="90%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Soft Skills -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-3 mb-4 text-[#00e5ff]">
+                        <i data-lucide="star" class="text-[#00e5ff]" style="width: 24px; height: 24px;"></i>
+                        <h3 class="text-xl font-bold text-gray-100">Soft Skills</h3>
+                    </div>
+                    <ul class="list-none pl-0 space-y-4 text-gray-300">
+                        <li>
+                            <p class="font-medium">Teamwork</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="90%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Problem-Solving</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Communication</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="80%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Adaptability</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Time Management</p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="75%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e2e8f0] text-center mb-12 sm:mb-16 tracking-tight">Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Personal Portfolio Website -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="file-text" class="text-[#00e5ff]" style="width: 24px; height: 24px;"></i>
+                        <h3 class="text-xl font-bold text-gray-100">Personal Portfolio Website (In Progress)</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Designing and building a personal portfolio website to showcase my education, skills, and career journey. Using HTML, CSS, JavaScript, and planning to integrate Python for backend functionality. Goal: Create a professional online presence to share projects and achievements.</p>
+                </div>
+                <!-- Data Analysis Mini-Project -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="file-text" class="text-[#00e5ff]" style="width: 24px; height: 24px;"></i>
+                        <h3 class="text-xl font-bold text-gray-100">Data Analysis Mini-Project (Planned)</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Exploring data analysis with Python (Pandas, Matplotlib) and Excel. Example project: analyzing financial or business datasets to extract insights. Goal: Build hands-on experience in data science and demonstrate practical application of analytical tools.</p>
+                </div>
+                <!-- PLP Academy Collaborative Project -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="file-text" class="text-[#00e5ff]" style="width: 24px; height: 24px;"></i>
+                        <h3 class="text-xl font-bold text-gray-100">PLP Academy Collaborative Project (Upcoming)</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Working with peers to develop a real-world project under the PLP Academy program. Focus: solving a problem using programming and digital tools. Expected outcomes: enhanced teamwork, problem-solving, and coding skills.</p>
+                </div>
+                <!-- Web Development Practice Projects -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="file-text" class="text-[#00e5ff]" style="width: 24px; height: 24px;"></i>
+                        <h3 class="text-xl font-bold text-gray-100">Web Development Practice Projects (Ongoing)</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Building small applications and websites to strengthen frontend and backend knowledge. Examples include: a task manager app, a personal blog, and a finance tracker. Goal: Gain practical coding experience and showcase web development skills.</p>
+                </div>
+                <!-- Financial Accounting Simulation -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="file-text" class="text-[#00e5ff]" style="width: 24px; height: 24px;"></i>
+                        <h3 class="text-xl font-bold text-gray-100">Financial Accounting Simulation (Planned)</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Developing a mock project that simulates bookkeeping and financial reporting using Excel and Python. Goal: integrate business knowledge from BCom/CPA with technical tools to automate accounting processes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e2e8f0] text-center mb-12 sm:mb-16 tracking-tight">Interests</h2>
+            <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
+                <!-- Finance & Accounting -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] flex items-start space-x-4">
+                    <div class="text-[#00e5ff] mt-1">
+                        <i data-lucide="trending-up" class="text-[#00e5ff]" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-100 mb-1">Finance & Accounting</h3>
+                        <p class="text-gray-300 leading-relaxed">Pursuing a career in auditing, banking, or corporate finance.</p>
+                    </div>
+                </div>
+                <!-- Technology & Innovation -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] flex items-start space-x-4">
+                    <div class="text-[#00e5ff] mt-1">
+                        <i data-lucide="lightbulb" class="text-[#00e5ff]" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-100 mb-1">Technology & Innovation</h3>
+                        <p class="text-gray-300 leading-relaxed">Exploring how data science and programming can add value to business decision-making.</p>
+                    </div>
+                </div>
+                <!-- Fintech & AI in Finance -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] flex items-start space-x-4">
+                    <div class="text-[#00e5ff] mt-1">
+                        <i data-lucide="code" class="text-[#00e5ff]" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-100 mb-1">Fintech & AI in Finance</h3>
+                        <p class="text-gray-300 leading-relaxed">Interested in how automation, digital banking, and AI-powered analytics are transforming the financial sector.</p>
+                    </div>
+                </div>
+                <!-- Continuous Learning -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d] flex items-start space-x-4">
+                    <div class="text-[#00e5ff] mt-1">
+                        <i data-lucide="book" class="text-[#00e5ff]" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-100 mb-1">Continuous Learning</h3>
+                        <p class="text-gray-300 leading-relaxed">Passionately about personal development and acquiring future-ready skills that merge business with technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Goals Section -->
+        <section id="careerGoals" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e2e8f0] text-center mb-12 sm:mb-16 tracking-tight">Career Goals</h2>
+            <div class="space-y-12">
+                <!-- Short Term -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d]">
+                    <h3 class="text-2xl font-bold text-[#00e5ff] mb-4">Short Term (1–2 years)</h3>
+                    <ul class="list-disc pl-6 space-y-3 text-gray-300">
+                        <li>Establish a solid academic foundation in BCom at Egerton University.</li>
+                        <li>Progress in CPA studies while continuing to build proficiency in Python, Excel, and web development.</li>
+                        <li>Complete projects through PLP Academy that showcase technical and collaborative skills.</li>
+                    </ul>
+                </div>
+                <!-- Medium Term -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d]">
+                    <h3 class="text-2xl font-bold text-[#00e5ff] mb-4">Medium Term (3–4 years)</h3>
+                    <ul class="list-disc pl-6 space-y-3 text-gray-300">
+                        <li>Graduate with a Bachelor of Commerce degree and complete advanced levels of CPA.</li>
+                        <li>Gain practical experience through internships in finance, auditing, or technology-driven firms.</li>
+                        <li>Build a strong portfolio of web and data science projects to demonstrate applied technical expertise.</li>
+                    </ul>
+                </div>
+                <!-- Long Term -->
+                <div class="bg-[#1a1a1a] rounded-3xl p-6 shadow-xl border border-[#2d2d2d]">
+                    <h3 class="text-2xl font-bold text-[#00e5ff] mb-4">Long Term (5+ years)</h3>
+                    <ul class="list-disc pl-6 space-y-3 text-gray-300">
+                        <li>Become a well-rounded professional with CPA certification, BCom degree, and strong technical competence.</li>
+                        <li>Work in corporate finance, auditing, or banking, while leveraging data-driven solutions for strategic decision-making.</li>
+                        <li>Explore entrepreneurial opportunities in fintech, consultancy, or technology-driven business ventures.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="bg-[#0d0d0d] py-16">
+        <div class="max-w-xl mx-auto text-center px-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#e2e8f0] mb-4">Get In Touch</h2>
+            <p class="text-gray-300 mb-8">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:charlesfred285@gmail.com" target="_blank" rel="noopener noreferrer" class="h-14 w-14 flex items-center justify-center bg-[#1a1a1a] text-[#00e5ff] hover:bg-[#00e5ff] hover:text-white transition-all duration-300 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#00e5ff] focus:ring-opacity-50" aria-label="Email">
+                    <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+                </a>
+                <a href="tel:+254706367840" target="_blank" rel="noopener noreferrer" class="h-14 w-14 flex items-center justify-center bg-[#1a1a1a] text-[#00e5ff] hover:bg-[#00e5ff] hover:text-white transition-all duration-300 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#00e5ff] focus:ring-opacity-50" aria-label="Phone">
+                    <i data-lucide="smartphone" style="width: 24px; height: 24px;"></i>
+                </a>
+                <a href="https://www.instagram.com/fredxotic" target="_blank" rel="noopener noreferrer" class="h-14 w-14 flex items-center justify-center bg-[#1a1a1a] text-[#00e5ff] hover:bg-[#00e5ff] hover:text-white transition-all duration-300 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#00e5ff] focus:ring-opacity-50" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg>
+                </a>
+                <a href="https://github.com/fredxotic" target="_blank" rel="noopener noreferrer" class="h-14 w-14 flex items-center justify-center bg-[#1a1a1a] text-[#00e5ff] hover:bg-[#00e5ff] hover:text-white transition-all duration-300 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#00e5ff] focus:ring-opacity-50" aria-label="GitHub">
+                    <i data-lucide="github" style="width: 24px; height: 24px;"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('main section');
+            const nav = document.querySelector('nav');
+            const skillsSection = document.getElementById('skills');
+
+            // Function to activate the navigation item based on the section in view
+            const activateNavItem = (id) => {
+                navItems.forEach(item => {
+                    if (item.getAttribute('data-section') === id) {
+                        item.classList.add('bg-[#00e5ff]', 'text-white', 'shadow-lg');
+                        item.classList.remove('text-gray-400', 'hover:bg-[#1a1a1a]', 'hover:text-white');
+                    } else {
+                        item.classList.remove('bg-[#00e5ff]', 'text-white', 'shadow-lg');
+                        item.classList.add('text-gray-400', 'hover:bg-[#1a1a1a]', 'hover:text-white');
+                    }
+                });
+            };
+
+            // Function to animate skill bars when the skills section is in view
+            const animateSkills = () => {
+                const skillBars = skillsSection.querySelectorAll('[data-skill-level]');
+                const skillsInView = skillsSection.getBoundingClientRect().top < (window.innerHeight / 1.5) && skillsSection.getBoundingClientRect().bottom > 0;
+
+                if (skillsInView) {
+                    skillBars.forEach(bar => {
+                        const level = bar.getAttribute('data-skill-level');
+                        bar.style.width = level;
+                    });
+                    window.removeEventListener('scroll', animateSkills);
+                }
+            };
+            
+            // Handle active navigation item and skill animation on scroll
+            const handleScroll = () => {
+                let currentSection = 'about';
+                const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+                sections.forEach(section => {
+                    if (scrollPosition >= section.offsetTop) {
+                        currentSection = section.id;
+                    }
+                });
+                
+                // Add contact section to the logic
+                const contactSection = document.getElementById('contact');
+                if (scrollPosition >= contactSection.offsetTop) {
+                    currentSection = 'contact';
+                }
+
+                activateNavItem(currentSection);
+                animateSkills();
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); 
+        });
+    </script>
+</body>
+</html>
