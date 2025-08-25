@@ -8,20 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0d0d0d; 
-            color: #e2e8f0; 
+            background-color: #0d0d0d; /* Very dark grey, almost black */
+            color: #e2e8f0; /* Light grey for readability */
             scroll-behavior: smooth;
-        } 
+        }
 
+        /* Set icons to inherit current text color */
         .icon-lg, .icon-md, .icon-sm {
             display: inline-block;
             vertical-align: middle;
         }
         
+        /* Custom scrollbar styles */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -58,21 +61,22 @@
             }
         }
 
+        /* Custom animation for the progress bar */
         .animate-progress {
             transition: width 1s ease-out;
         }
     </style>
 </head>
 <body class="bg-[#0d0d0d] text-[#e2e8f0] font-sans leading-relaxed tracking-wide">
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar - UPDATED for better mobile view -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d0d] bg-opacity-80 backdrop-blur-sm shadow-xl py-4 transition-all duration-300">
-        <div class="max-w-7xl mx-auto flex justify-center space-x-2 sm:space-x-4 px-4">
-            <a href="#about" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="about">About</a>
-            <a href="#education" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="education">Education</a>
-            <a href="#skills" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="skills">Skills</a>
-            <a href="#projects" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="projects">Projects</a>
-            <a href="#careerGoals" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="careerGoals">Goals</a>
-            <a href="#contact" class="nav-item py-2 px-3 sm:px-4 rounded-full text-sm sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="contact">Contact</a>
+        <div class="max-w-7xl mx-auto flex justify-center overflow-x-auto whitespace-nowrap px-4 scrollbar-thin">
+            <a href="#about" class="nav-item py-2 px-3 sm:px-4 rounded-full text-xs sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="about">About</a>
+            <a href="#education" class="nav-item py-2 px-3 sm:px-4 rounded-full text-xs sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="education">Education</a>
+            <a href="#skills" class="nav-item py-2 px-3 sm:px-4 rounded-full text-xs sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="skills">Skills</a>
+            <a href="#projects" class="nav-item py-2 px-3 sm:px-4 rounded-full text-xs sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="projects">Projects</a>
+            <a href="#careerGoals" class="nav-item py-2 px-3 sm:px-4 rounded-full text-xs sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="careerGoals">Goals</a>
+            <a href="#contact" class="nav-item py-2 px-3 sm:px-4 rounded-full text-xs sm:text-base font-medium transition-all duration-300 text-gray-400 hover:text-white hover:bg-[#1a1a1a]" data-section="contact">Contact</a>
         </div>
     </nav>
 
@@ -80,10 +84,10 @@
     <header class="relative pt-24 pb-12 sm:pt-32 sm:pb-24 lg:pt-32 lg:pb-32 flex items-center justify-center text-center">
         <div class="relative z-10 p-4 md:p-6 bg-[#1a1a1a] bg-opacity-70 backdrop-blur-sm rounded-3xl shadow-2xl border border-gray-700 max-w-2xl mx-auto transform transition-all duration-500 hover:scale-[1.01]">
             <h1 class="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-[#00e5ff] mb-2 tracking-tight leading-tight drop-shadow-md animate-[fadeInDown_1s_ease-out]">
-                Hello there!
+                Fred Kaloki
             </h1>
             <p class="text-base sm:text-lg md:text-xl text-gray-300 italic font-medium drop-shadow-sm animate-[fadeInUp_1s_ease-out]">
-                "Welcome to my portfolio! I am an ambitious learner & aspiring professional at the intersection of Business, Accounting, and Technology."
+                "Ambitious learner & aspiring professional at the intersection of Business, Accounting, and Technology."
             </p>
         </div>
     </header>
@@ -98,6 +102,7 @@
                 <div class="mb-8 md:mb-0">
                     <img src="me.jpg" alt="A professional portrait of Fred Kaloki." class="w-full h-auto object-cover rounded-3xl shadow-lg border border-gray-600 transform transition-transform duration-300 hover:scale-[1.03]">
                 </div>
+                <!-- Shortened About Me Text -->
                 <div>
                     <p class="text-gray-300 text-base md:text-lg leading-relaxed">
                         I am Fred Kaloki, a student and aspiring professional interested in business, accounting, and technology. I am currently pursuing a Bachelor of Commerce (BCom) at Egerton University while also preparing for the Certified Public Accountant (CPA) qualification. I believe in combining financial knowledge with digital skills to prepare for the future of business. I am a disciplined learner who is always looking for new ways to grow and apply my skills to real-world projects.
@@ -200,7 +205,7 @@
                         <li>
                             <p class="font-medium">Python</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
-                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="90%"></div>
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="70%"></div>
                             </div>
                             <ul class="list-disc pl-4 mt-2 text-sm text-gray-400">
                                 <li><strong>NumPy:</strong> For efficient numerical operations.</li>
@@ -227,13 +232,13 @@
                         <li>
                             <p class="font-medium">Microsoft Office Suite</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
-                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="95%"></div>
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="90%"></div>
                             </div>
                         </li>
                         <li>
                             <p class="font-medium">Google Workspace</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
-                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="90%"></div>
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="85%"></div>
                             </div>
                         </li>
                         <li>
@@ -245,7 +250,7 @@
                         <li>
                             <p class="font-medium">Git & GitHub</p>
                             <div class="w-full bg-gray-700 rounded-full h-2.5 mt-1">
-                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="90%"></div>
+                                <div class="bg-[#00e5ff] h-2.5 rounded-full animate-progress" style="width: 0;" data-skill-level="50%"></div>
                             </div>
                         </li>
                     </ul>
@@ -476,6 +481,7 @@
                         const level = bar.getAttribute('data-skill-level');
                         bar.style.width = level;
                     });
+                    // Remove the event listener after animating to prevent re-animation
                     window.removeEventListener('scroll', animateSkills);
                 }
             };
@@ -502,7 +508,7 @@
             };
 
             window.addEventListener('scroll', handleScroll);
-            handleScroll(); 
+            handleScroll(); // Initial call to set the active nav item and check for skills animation on load
         });
     </script>
 </body>
